@@ -1,43 +1,73 @@
-🚀 Anomalous Behavior Detection in Social Networks Using Graph Neural Networks
+# Anomalous Behavior Detection in Social Networks using Graph Neural Networks
 
-A scalable, multi-layered security framework that leverages Graph Neural Networks (GNNs) to detect malicious and coordinated behavior in large-scale social networks.
+A scalable AI system designed to detect bots, spammers, and coordinated malicious behavior in social networks using Graph Neural Networks (GNNs).
 
-📌 Overview
+## Overview
+This project focuses on identifying anomalous and coordinated behavior in large-scale social networks. Instead of analyzing users individually, it models the entire platform as a graph to capture relationships and interaction patterns.
 
-This project addresses the limitations of traditional security systems in modern social platforms by shifting from individual user analysis to graph-based relational modeling. It detects both known threats (bots) and unknown anomalies (coordinated attacks) using a hybrid deep learning approach.
+## Tech Stack
 
-🎯 Key Features
+Core:
+- Python
+- PyTorch
+- PyTorch Geometric
 
-🔗 Graph-Based Modeling
-Represents users as nodes and interactions (follows, mentions, retweets) as edges to capture network dynamics.
+NLP:
+- RoBERTa (for semantic embeddings)
 
-🧠 Multi-Modal Feature Engineering
-Combines:
+Graph & Algorithms:
+- Graph Attention Network (GAT)
+- Graph Autoencoder (GAE)
+- Louvain Community Detection
 
-Numerical features (followers, activity rate)
+Frontend:
+- Streamlit
 
-Categorical metadata (verification status, profile info)
+Dataset:
+- TwiBot-22, cresc-15
 
-Semantic embeddings (via RoBERTa)
+## Features
 
-🤖 Dual Detection Engine
+- Graph-based modeling of social networks (nodes = users, edges = interactions)
+- Multi-modal feature engineering (numerical, categorical, semantic)
+- Supervised bot detection using GAT
+- Unsupervised anomaly detection using GAE
+- Detection of coordinated communities using clustering
+- Statistical anomaly detection using reconstruction error
+- Interactive dashboard for visualization
 
-Graph Attention Network (GAT) → Supervised bot detection
+## System Pipeline
 
-Graph Autoencoder (GAE) → Unsupervised anomaly detection
+- Data preprocessing and feature extraction
+- Graph construction from user interactions
+- Train GAT model for bot classification
+- Train GAE model for anomaly detection
+- Community detection using Louvain algorithm
+- Identify anomalous groups using statistical thresholds
+- Visualize results using Streamlit dashboard
 
-🌐 Community-Level Threat Detection
+## Results
 
-Louvain clustering for detecting dense user communities
+- Accurate detection of bots and fake accounts
+- Identification of unknown anomalies and coordinated attacks
+- Robust performance on evolving social network behavior
 
-Statistical anomaly scoring using reconstruction error
+## Purpose
 
-🧾 AI-Powered Profiling
+This project was built to:
+- Explore Graph Neural Networks in real-world scenarios
+- Detect complex and coordinated malicious behavior
+- Combine supervised and unsupervised learning approaches
+- Build an end-to-end AI system
 
-Integrates Gemini AI for generating human-readable summaries of suspicious communities
+## What I Learned
+
+- Graph-based machine learning using PyTorch Geometric
+- Designing hybrid AI systems (classification + anomaly detection)
+- Working with large-scale social network data
+- Integrating NLP with graph models
 
 
 
-Community Anomalies
-
-(Upcoming) Compromised Accounts
+## Repository
+https://github.com/your-username/gnn-anomaly-detection
