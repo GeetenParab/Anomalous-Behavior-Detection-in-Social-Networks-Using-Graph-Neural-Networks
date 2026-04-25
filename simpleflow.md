@@ -63,7 +63,7 @@ flowchart TD
     J -->|Yes| K[Anomalous Community]
     J -->|No| L[Authentic Community]
 
-    K --> M["Gemini 1.5 Flash\nProfile the group behavior"]
+    K --> M["LLM \nProfile the group behavior"]
     M --> N([Community Type +\nBehavioral Summary])
 ```
 
